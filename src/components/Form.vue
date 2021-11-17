@@ -52,12 +52,14 @@
 
 <script>
 export default {
-  data: () => ({
-    email: null,
-    enterCompetition: 'yes'
-  }),
+  data() {
+    return {
+      email: null,
+      enterCompetition: 'yes'
+    }
+  },
   methods: {
-    onSubmit (event) {
+    onSubmit(event) {
       this.axios.post('http://demo7437963.mockable.io/validate', {
         email: this.email,
         enterCompetition: this.enterCompetition === 'yes'

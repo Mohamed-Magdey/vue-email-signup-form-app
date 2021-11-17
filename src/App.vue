@@ -1,8 +1,8 @@
 <template>
   <div>
-    <modal
+    <Modal
       v-if="displayModal"
-      v-on:close-modal="closeModal"
+      @close-modal="closeModal"
     >
       <Form v-on:form-submitted="closeModal" />
     </Modal>
@@ -23,7 +23,7 @@ export default {
     Modal
   },
   methods: {
-    closeModal () {
+    closeModal() {
       this.displayModal = false
     }
   }
